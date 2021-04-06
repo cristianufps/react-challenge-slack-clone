@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
-import db from '../firebase'
+import db from '../../firebase'
 import { useParams } from 'react-router-dom'
 import firebase from "firebase"
 
