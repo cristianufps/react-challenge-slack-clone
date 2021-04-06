@@ -20,7 +20,7 @@ const More = () => {
     <Container>
       {sidebarItemsData.map((item) => (
         <Link to={item.route}>
-          <ListItems>
+          <ListItems key={item.text}>
             {item.icon}
             {item.text}
           </ListItems>

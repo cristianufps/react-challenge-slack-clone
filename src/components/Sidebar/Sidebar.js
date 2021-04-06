@@ -11,7 +11,6 @@ function Sidebar(props) {
 
   const goToChannel = (id) => {
     if (id) {
-      console.log(id);
       history.push(`/room/${id}`);
     }
   };
@@ -35,7 +34,7 @@ function Sidebar(props) {
       </WorkspaceContainer>
       <MainChannels>
         {sidebarItemsData.map((item) => (
-          <Link to={item.route}>
+          <Link to={item.route} key={item.text}>
             <MainChannelItem>
               {item.icon}
               {item.text}
@@ -50,7 +49,7 @@ function Sidebar(props) {
         </NewChannelContainer>
         <ChannelsList>
           {props.rooms.map((item) => (
-            <Channel onClick={() => goToChannel(item.id)}>
+            <Channel onClick={() => goToChannel(item.id)} key={item.id}>
               # {item.name}
             </Channel>
           ))}

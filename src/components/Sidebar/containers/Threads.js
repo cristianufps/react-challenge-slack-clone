@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import AlertDialogSlide from "../../Dialog/Dialog";
 
 const Container = styled.div`
   justify-content: center;

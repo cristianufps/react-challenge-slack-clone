@@ -9,31 +9,31 @@ export const sidebarItemsData = [
   {
     icon: <MessageIcon />,
     text: "Thread",
-    route: "threads",
+    route: "/threads",
   },
   {
     icon: <InboxIcon />,
     text: "All DMs",
-    route: "all-direct-messages",
+    route: "/all-direct-messages",
   },
   {
     icon: <DraftsIcon />,
     text: "Mentions & Reactions",
-    route: "mentions-and-reactions",
+    route: "/mentions-and-reactions",
   },
   {
     icon: <BookmarkBorderIcon />,
     text: "Save Items",
-    route: "saved-items",
+    route: "/saved-items",
   },
   {
     icon: <PeopleIcon />,
     text: "Peoples & Groups",
-    route: "groups-and-people",
+    route: "/groups-and-people",
   },
   {
     icon: <AppsIcon />,
     text: "More",
-    route: "more-options",
+    route: "/more-options",
   },
 ];

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import AlertDialogSlide from "../Dialog/Dialog";
 
 function Header({ user, signOut }) {
   return (
@@ -15,14 +16,16 @@ function Header({ user, signOut }) {
         </SearchContainer>
         <HelpOutlineIcon />
       </Main>
-      <UserContainer>
+      <AlertDialogSlide user={user} signOut={signOut} />
+      {/* <UserContainer>
         <Name>{user.name}</Name>
         <UserImage onClick={signOut}>
           <img
             src={user.photo ? user.photo : "https://i.imgur.com/6VBx3io.png"}
+            alt="user"
           />
         </UserImage>
-      </UserContainer>
+      </UserContainer> */}
     </Container>
   );
 }
@@ -73,27 +76,27 @@ const Search = styled.div`
   }
 `;
 
-const UserContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding-right: 16px;
-  position: absolute;
-  right: 0;
-`;
+// const UserContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   padding-right: 16px;
+//   position: absolute;
+//   right: 0;
+// `;
 
-const Name = styled.div`
-  padding-right: 16px;
-`;
+// const Name = styled.div`
+//   padding-right: 16px;
+// `;
 
-const UserImage = styled.div`
-  width: 28px;
-  height: 28px;
-  /* border: 2px solid white; */
-  border-radius: 3px;
-  cursor: pointer;
+// const UserImage = styled.div`
+//   width: 28px;
+//   height: 28px;
+//   /* border: 2px solid white; */
+//   border-radius: 3px;
+//   cursor: pointer;
 
-  img {
-    width: 100%;
-    border-radius: 50%;
-  }
-`;
+//   img {
+//     width: 100%;
+//     border-radius: 50%;
+//   }
+// `;
