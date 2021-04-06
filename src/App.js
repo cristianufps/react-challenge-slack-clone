@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
 import Chat from "./components/Chat/Chat";
-import DirectMessages from "./components/DirectMessages";
-import Header from "./components/Header";
-import Login from "./components/Login";
-import MentionsReactions from "./components/MentionsReactions";
-import More from "./components/More";
-import PeoplesAndGroups from "./components/PeoplesAndGroups";
-import SaveItems from "./components/SaveItems";
-import Sidebar from "./components/Sidebar";
-import Threads from "./components/Threads";
+import DirectMessages from "./components/Sidebar/containers/DirectMessages";
+import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
+import MentionsReactions from "./components/Sidebar/containers/MentionsReactions";
+import More from "./components/Sidebar/containers/More";
+import PeoplesAndGroups from "./components/Sidebar/containers/PeoplesAndGroups";
+import SaveItems from "./components/Sidebar/containers/SaveItems";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Threads from "./components/Sidebar/containers/Threads";
 import db, { auth } from "./firebase";
 
 function App() {
@@ -55,22 +55,22 @@ function App() {
                   <Chat user={user} />
                 </Route>
                 <Route path="/threads">
-                  <Chat user={Threads} />
+                  <Threads />
                 </Route>
                 <Route path="/all-direct-messages">
-                  <Chat user={DirectMessages} />
+                  <DirectMessages />
                 </Route>
                 <Route path="/mentions-and-reactions">
-                  <Chat user={MentionsReactions} />
+                  <MentionsReactions />
                 </Route>
                 <Route path="/saved-items">
-                  <Chat user={SaveItems} />
+                  <SaveItems />
                 </Route>
                 <Route path="/groups-and-people">
-                  <Chat user={PeoplesAndGroups} />
+                  <PeoplesAndGroups />
                 </Route>
                 <Route path="/more-options">
-                  <Chat user={More} />
+                  <More />
                 </Route>
                 <Route path="/">Select or Create Channel</Route>
               </Switch>
